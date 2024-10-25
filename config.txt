@@ -1,0 +1,38 @@
+
+debian11 安装防火墙管理软件
+在Debian 11系统上，可以使用ufw（Uncomplicated Firewall）作为防火墙管理软件。以下是安装和配置ufw的步骤：
+
+更新软件包列表：
+
+sudo apt update
+
+安装ufw：
+
+sudo apt install ufw
+
+启用ufw：
+
+sudo ufw enable
+
+（可选）允许特定端口或服务：
+
+sudo ufw allow 22/tcp    # 允许SSH（通常为22/tcp）
+sudo ufw allow 80/tcp    # 允许HTTP
+sudo ufw allow 443/tcp   # 允许HTTPS
+
+（可选）拒绝特定端口或服务：
+
+sudo ufw deny 6667/tcp  # 拒绝IRC（通常为6667/tcp）
+
+查看防火墙状态和规则列表：
+
+sudo ufw status verbose
+
+（可选）禁用ufw：
+
+sudo ufw disable
+
+
+
+拉取debian11镜像
+docker pull debian11
